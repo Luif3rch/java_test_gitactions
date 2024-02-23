@@ -19,5 +19,8 @@ jobs:
         with:
           java-version: 21
           distribution: temurin
-      - name: Validate tests
-        run: junit-checkstyle-plugin:checkstyle
+      - name: Build
+        run: mvn clean install
+
+      - name: Test
+        run: mvn test
